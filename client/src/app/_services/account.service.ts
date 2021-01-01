@@ -9,7 +9,6 @@ import { User } from '../_models/user';
 })
 export class AccountService {
   baseUrl = 'https://localhost:5001/api/';
-  // tslint:disable-next-line: new-parens
   private currentUserSource = new ReplaySubject<User>(1);
   currentUser$ = this.currentUserSource.asObservable();
 
